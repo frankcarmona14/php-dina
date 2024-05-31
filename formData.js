@@ -3,8 +3,11 @@ function saveFormData() {
         name: document.getElementById('nombre')?.value,
         lastname: document.getElementById('apellido')?.value,
         phone: document.getElementById('celular')?.value,
-        email: document.getElementById('correo').value,
-        password: document.getElementById('contrasena').value,
+        email: document.getElementById('correo')?.value,
+        edad: document.getElementById('edad')?.value,
+        peso: document.getElementById('peso')?.value,
+        talla: document.getElementById('talla')?.value,
+        password: document.getElementById('contrasena')?.value,
     }
     localStorage.setItem('saveFormData', JSON.stringify(formData))
 }
@@ -36,10 +39,10 @@ function loadFormData() {
         const data = JSON.parse(formData)
         document.getElementById('nombre').value = data.name || ''
         document.getElementById('apellido').value = data.lastname || ''
-        document.getElementById('correo').value = data.phone || ''
-        document.getElementById('edad').value = data.email || ''
-        document.getElementById('peso').value = data.email || ''
-        document.getElementById('talla').value = data.email || ''
+        document.getElementById('correo').value = data.email || ''
+        document.getElementById('edad').value = data.edad || ''
+        document.getElementById('peso').value = data.peso || ''
+        document.getElementById('talla').value = data.talla || ''
     }
 }
 

@@ -38,4 +38,5 @@
         </form>
     </div>
 </body>
+<script src="formData.js"></script>
 </html>
